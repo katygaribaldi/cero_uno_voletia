@@ -1,0 +1,19 @@
+<h3>Edita un evento</h3>
+
+<h3><%= @event.name %></h3>
+
+<p>
+	<%= form_for(@event) do |f| %>
+	<%= f.label :name %>   
+	<!-- %= f.label :name, "Nombre del evento" %> -->
+
+	<%= f.text_field :name%>
+</p>
+<p>
+	<%= f.label :description %>
+	<%= f.text_field :description %>
+</p>
+<p>
+<%= f.submit 'Editar Evento' %>
+</p>
+<% end %>

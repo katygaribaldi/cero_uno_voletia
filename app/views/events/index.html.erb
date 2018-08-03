@@ -1,0 +1,9 @@
+<h1>Voletia</h1>
+<h3>El sitio más cool para registrar eventos.</h3>
+<ul>
+<% @events.each do |event| %>
+	<li><%= link_to event.name, event_path(event.id) %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Crear Evento', new_event_path %>
